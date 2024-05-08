@@ -2,11 +2,15 @@ import { LucideProps } from "lucide-react";
 
 export const Icons = {
   logo: (props: LucideProps) => (
-    <svg {...props} viewBox="0 0 14 14">
-      <g transform="translate(-5,-3)" fill="#a6a6a6">
+    <svg
+      {...props}
+      viewBox="0 0 14 14"
+    >
+      <g
+        transform="translate(-5,-3)"
+        fill="#a6a6a6"
+      >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
           d="M13 9C13 8.44772 13.4477 8 14 8H18C18.5523 8 19 8.44772 19 9V13C19 13.5523 18.5523 14 18 14C17.4477 14 17 13.5523 17 13V11.4142L14.4142 14C13.6332 14.781 12.3668 14.781 11.5858 14L10 12.4142L6.70711 15.7071C6.31658 16.0976 5.68342 16.0976 5.29289 15.7071C4.90237 15.3166 4.90237 14.6834 5.29289 14.2929L8.58579 11C9.36684 10.2189 10.6332 10.219 11.4142 11L13 12.5858L15.5858 10H14C13.4477 10 13 9.55228 13 9Z"
           fill="black"
         ></path>
