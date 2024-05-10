@@ -57,6 +57,7 @@ const Page = () => {
       }
 
       router.push("/");
+      router.refresh();
     },
 
     onError: (err) => {
@@ -65,9 +66,6 @@ const Page = () => {
       }
     },
   });
-
-  // const { data } = trpc.anyApiRoute.useQuery();
-  // console.log(data);
 
   const onSubmit = ({ email, password }: TAuthCredentialsValidator) => {
     signIn({ email, password });

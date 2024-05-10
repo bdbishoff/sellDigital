@@ -2,11 +2,20 @@
 
 import { User } from "@/payload-types";
 import { Button } from "./ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "./ui/dropdown-menu";
-import { DropdownMenuItem, DropdownMenuSeparator } from "@radix-ui/react-dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+} from "./ui/dropdown-menu";
+import {} from "@radix-ui/react-dropdown-menu";
 import Link from "next/link";
+import { useAuth } from "@/hooks/use-auth";
 
 const UserAccountNav = ({ user }: { user: User }) => {
+  const { signOut } = useAuth();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
@@ -34,7 +43,12 @@ const UserAccountNav = ({ user }: { user: User }) => {
           <Link href="/sell">Seller Dashboard</Link>
         </DropdownMenuItem>
 
-        <DropdownMenuItem className="cursor-pointer">Log out</DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={signOut}
+          className="cursor-pointer"
+        >
+          Log out
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
