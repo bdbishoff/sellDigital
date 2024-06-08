@@ -36,7 +36,9 @@ const Navbar = async () => {
                   {user ? null : (
                     <Link
                       href="/sign-in"
-                      className={buttonVariants({ variant: "ghost" })}
+                      className={buttonVariants({
+                        variant: "ghost",
+                      })}
                     >
                       Sign in
                     </Link>
@@ -54,7 +56,9 @@ const Navbar = async () => {
                   ) : (
                     <Link
                       href="/sign-up"
-                      className={buttonVariants({ variant: "ghost" })}
+                      className={buttonVariants({
+                        variant: "ghost",
+                      })}
                     >
                       Create account
                     </Link>
@@ -75,10 +79,10 @@ const Navbar = async () => {
                       />
                     </div>
                   )}
+                </div>
 
-                  <div className="ml-4 flow-root lg:ml-6">
-                    <Cart />
-                  </div>
+                <div className="ml-4 flow-root lg:ml-6">
+                  <Cart />
                 </div>
               </div>
             </div>
